@@ -1,0 +1,24 @@
+{
+  "name": "com.fiuu.cordovaapp",
+  "displayName": "XDK Fiuu Cordova Demo",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "cordova": {
+    "platforms": [],
+    "plugins": {}
+  },
+  "devDependencies": {
+    "cordova-plugin-device": "^3.0.0",
+    "cordova-plugin-env": "^1.1.0",
+    "dotenv": "^17.2.2"
+  }
+}
