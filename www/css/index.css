@@ -1,0 +1,169 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+/* html, body {
+  overscroll-behavior: none;     
+  -webkit-overflow-scrolling: auto;
+} */
+ 
+.container {
+  margin-top: calc(80px + env(safe-area-inset-top));
+  /* fallback for older iPhones without notch */
+  padding-top: calc(80px + constant(safe-area-inset-top)); /* legacy iOS < 11.2 */
+}
+
+body {
+    -webkit-touch-callout: none;
+    /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;
+    /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;
+    /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color: #0B2F4A;
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    font-size: 12px;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+    width: 100%;
+}
+
+.app {
+    padding: 10px;
+}
+
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position: left center;
+        padding: 75px 0px 75px 170px;
+        /* padding-top + padding-bottom + text area = image height */
+        margin: -90px 0px 0px -198px;
+        /* offset vertical: half of image height */
+        /* offset horizontal: half of image width and text area width */
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1.0;
+    }
+}
+
+.blink {
+    animation: fade 3000ms infinite;
+    -webkit-animation: fade 3000ms infinite;
+}
+
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        /* background-image:linear-gradient(to bottom, #585858 0%, #1B1B1B 51%); */
+    }
+}
+
+.btn-action {
+    padding: 10px 12px;
+    border-radius: 20px;
+    margin: 0 10px 10px 0;
+}
+
+.console-payment {
+    padding: 10px;
+    /* height: 200px; */
+    min-height: 190px;
+    margin-top: 10px;
+    background: #E6F8F7;
+    color: #0B1B2B;
+    padding: 16px;
+    border: 5px #13588b solid;
+    border-radius: 10px;
+    overflow: auto;
+    white-space: pre-wrap;
+    /* wrap long lines */
+    word-wrap: break-word;
+    /* box-shadow: inset 0 0 0 1px #0B2F4A; */
+}
+
+#settingToggleModal .bottom-nav {
+    height: 60px;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+}
+
+#settingToggleModal .bottom-nav .nav-link {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+#settingToggleModal .bottom-nav .nav-link.active {
+    color: #42cf2c;
+    /* Bootstrap primary */
+    font-weight: 500;
+}
+
+#settingToggleModal .bottom-nav i {
+    display: block;
+    font-size: 1.3rem;
+}
+
+.appbar{
+    background-color: #00827C;
+}
+
+.label-form{
+    color: white;
+    font-size: 0.85rem;
+}
+
+
+.btn-check+.btn{
+    border-color:white;
+    font-weight: bold;
+    background-color: #fff !important;
+    color: #ababab;
+    box-shadow: 0px 0px 1px #000000;
+}
+.btn-check:checked+.btn{
+    border-color:green;
+    background-color: #00827C !important;
+}
+
+button#validBtn,.form-template-btn .btn {
+    background: #07B0A9;
+}
+
+button#missingBtn {
+    background: #EF4444;
+}
