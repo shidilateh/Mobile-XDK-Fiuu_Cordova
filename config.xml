@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.fiuu.cordovaapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets"
+    xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>XDK Fiuu Cordova Demo</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <hook type="before_build" src="hooks/setEnv.js" />
+    <!-- <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" /> -->
+    <allow-navigation href="https://localhost/*" />
+    <allow-navigation href="http://localhost/*" />
+    <allow-intent href="*" />
+    <access origin="*" />
+    <preference name="AndroidLaunchMode" value="singleTask" />
+    <preference name="android-minSdkVersion" value="26" />
+    <preference name="SwiftVersion" value="5.0" />
+    <preference name="ios.useSwift" value="true" />
+    <preference name="hostname" value="localhost" />
+    <preference name="scheme" value="superapp" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="DisallowOverscroll" value="true" />
+    <platform name="android">
+        <config-file parent="/manifest/application/activity[@android:name='MainActivity']"
+            target="app/src/main/AndroidManifest.xml">
+            <intent-filter xmlns:android="http://schemas.android.com/apk/res/android">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="superapp" />
+            </intent-filter>
+        </config-file>
+    </platform>
+    <platform name="ios">
+        <preference name="deployment-target" value="16.0" />
+        <config-file target="config.xml" parent="/*">
+            <feature name="XdkFiuuCordova">
+                <param name="ios-package" value="XdkFiuuCordova" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/ios/XdkFiuuCordova.swift" />
+    </platform>
+</widget>
