@@ -26,7 +26,7 @@ This demo provides an integrated Fiuu payment module that contains a cordova plu
 
 ## Installation Guidance
 
-[Installation](https://github.com/shidilateh/Mobile-XDK-Fiuu_Cordova/wiki/Installations)
+[Installation](https://github.com/FiuuPayment/Mobile-XDK-Fiuu_Cordova/wiki)
 
 
 ## Resources
