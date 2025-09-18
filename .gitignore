@@ -1,0 +1,10 @@
+/node_modules/
+/platforms/
+/plugins/
+package-lock.json
+README.md2
+.vscode/
+/typings/
+jsconfig.json
+www/js/env.js
+.env

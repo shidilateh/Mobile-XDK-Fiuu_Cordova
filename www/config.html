@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link
+      href="css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      href="css/bootstrap-icons.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>XDK Fiuu Cordova Config</title>
+  </head>
+  <body>
+    <!-- AppBar -->
+    <nav class="navbar appbar fixed-top">
+      <div
+        class="container-fluid d-flex justify-content-between align-items-center"
+      >
+        <span class="navbar-brand mb-0 h1 text-white">XDK Fiuu Cordova</span>
+        <button
+          class="btn"
+          id="btnSettings"
+          data-bs-target="#settingToggleModal"
+          data-bs-toggle="modal"
+        >
+          <i class="bi bi-gear-fill fs-4 text-white"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container" id="contentBox">
+      <h6 class="text-white">Config</h6>
+      <div class="container clearfix mt-3">
+        <div class="mx-auto d-block text-center mt-3">
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Basic radio toggle button group"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="optForm"
+              id="form-valid"
+              autocomplete="off"
+              checked
+            />
+            <label class="btn btn-outline-primary" for="form-valid"
+              >Required Fields</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="optForm"
+              id="form-invalid"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-primary" for="form-invalid"
+              >Missing Fields</label
+            >
+          </div>
+        </div>
+        <div class="form-group form-template-field d-none text-start mb-2">
+          <label class="label-form">Input with value</label>
+          <input type="text" class="input-with-value form-control form-control-sm" />
+          <div class="input-with-group input-group mb-3 mt-1">
+            <input type="text" class="form-control form-control-sm" />
+            <button
+              class="btn btn-primary generate-id"
+              type="button"
+            >
+              Generate
+            </button>
+          </div>
+        </div>
+        <div
+          class="input-group d-flex form-invalid-template-field d-none text-start mb-2"
+        >
+          <!-- <label class="label-form">Input with value</label> -->
+          <span class="input-group-text flex-fill">
+            <label for="opt1" class="mb-0 w-100 text-start">Enable</label>
+          </span>
+          <div class="input-group-text">
+            <input
+              class="form-check-input mt-0"
+              type="checkbox"
+              value=""
+              aria-label="Checkbox for following text input"
+            />
+          </div>
+        </div>
+        <div class="form-group form-template-btn d-none d-grid gap-2">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="mx-auto d-block text-center mt-2">
+          <div class="form-valid d-none p-2">
+            <div class="flex-fill overflow-auto p-3">
+              <form class="form-floating"></form>
+            </div>
+          </div>
+          <div class="form-invalid d-none p-2">
+            <div class="flex-fill overflow-auto p-3">
+              <form class="form-floating"></form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/env.js"></script>
+  <script src="js/platformNavigator.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/data.js"></script>
+  <script src="cordova.js"></script>
+  <script src="js/forms.js"></script>
+</html>
